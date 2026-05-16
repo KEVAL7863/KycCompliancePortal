@@ -64,9 +64,6 @@ The SQLite database (`kyc.db`) is created and seeded automatically on first run.
 | Admin | `keval@bank001.com` | `Admin@123` |
 | Compliance Officer | `hardik@bank001.com` | `Officer@123` |
 
-### Seeded watchlist
-`Ravi Mehta`, `Keval Gelani`, `Hardik Patel`, `Kenil Shah`, `Jay Trivedi`
-
 ---
 
 ## API
