@@ -121,28 +121,4 @@ Passed!  - Failed: 0, Passed: 48, Skipped: 0
 
 ---
 
-## Resume bullets (ready to paste)
 
-- Built a multi-tier **KYC/AML compliance onboarding REST API** in **ASP.NET Core 9 / C#**
-  with a clean layered architecture (Core / Application / Infrastructure / Api).
-- Implemented **JWT authentication with BCrypt-hashed passwords and role-based access**
-  (Customer / Compliance Officer / Admin) plus per-tenant data isolation (multi-tenancy).
-- Designed a deterministic **risk-scoring engine** and a **fuzzy AML watchlist screening**
-  service using the Levenshtein edit-distance algorithm (O(m·n) time, O(min) space).
-- Wrote **48 xUnit unit tests (TDD)** with FluentAssertions and Moq for the business layer;
-  modelled data with **Entity Framework Core** and an immutable audit trail.
-
-## Interview talking points
-
-- *Why layered?* business logic has zero framework/db dependency → trivially unit testable.
-- *Why TDD on the risk engine?* deterministic pure function → tests are the spec.
-- *Complexity question?* Levenshtein: start from O(m·n) matrix, show rolling-array
-  reduces space to O(min(m,n)) without changing the result.
-- *Security?* passwords are BCrypt-hashed (work factor 11), JWT carries role + tenant
-  claims, controllers enforce `[Authorize(Roles = …)]`, queries are tenant-scoped.
-- *Multi-tenancy?* every entity has a `TenantId`; the JWT tenant claim scopes all reads.
-
-## Next step
-
-Angular frontend (login + onboarding form + compliance officer review dashboard)
-talking to this API.
