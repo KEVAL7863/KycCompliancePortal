@@ -1,0 +1,22 @@
+# Build output
+bin/
+obj/
+out/
+
+# SQLite dev database
+*.db
+*.db-shm
+*.db-wal
+
+# IDE
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
